@@ -210,46 +210,150 @@ function acrescentar() {
 
 
 
+}
 
 
 
-    //-------------Decrementar -----------------------------
+//-------------Decrementar -----------------------------
 
 
-    function decrementar() {
+function decrementar() {
 
-        if (matricula.length <= 0) {
+    if (matricula.length <= 0) {
 
-        } else if (matricula.length >= 0) {
-            matricula.pop();
-            quantidadeHoraTrabalhada.pop();
-            salario.pop();
+    } else if (matricula.length >= 0) {
+        matricula.pop();
+        quantidadeHoraTrabalhada.pop();
+        salario.pop();
 
-            console.log(matricula.length)
-            console.log(quantidadeHoraTrabalhada)
-            console.log(salario)
+        console.log(matricula.length)
+        console.log(quantidadeHoraTrabalhada)
+        console.log(salario)
 
-        }
     }
+
+
+
+    //  ------------------------------------------------------------------
+
 
 
     document.querySelector(".totalMatricula").innerHTML = matricula.length
 
-    /*for (i = 0; i < quantidadeHoraTrabalhada.length; i++) {
-        var valor = parseInt(quantidadeHoraTrabalhada[i].value)
+    var reducaoDeHoras = 0;
+    var reducaoSalario = 0;
+
+    function tirarQuantidadeDeHora() {
+        reducaoDeHoras = 0;
+        for (var i = 0; i < matricula.length; i++) {
+            reducaoDeHoras += parseInt(quantidadeHoraTrabalhada[i].value);
+
+        }
+        return reducaoDeHoras;
+    }
+
+
+
+    function retirarSalario() {
+        reducaoSalario = 0
+        for (var i = 0; i < matricula.length; i++) {
+            reducaoSalario += parseInt(salario[i].value);
+
+        }
+        return reducaoSalario
+    }
+
+    var reducao = 0;
+
+    function reducaoSomatorio() {
+        reducao = 0;
+
+        for (var i = 0; i < matricula.length; i++) {
+            reducao += parseInt(salario[i].value * quantidadeHoraTrabalhada[i].value);
+        }
+        return reducao;
+    }
+
+
+
+
+    document.querySelector(".valorTotalAqui").innerHTML = reducaoSomatorio();
+
+    /*for (i = 0; i < quantidadeHoraTrabalhada.length; i++) { 
+       var valor = parseInt(quantidadeHoraTrabalhada[i].value)
             //somaTotalDasHoras = parseInt(quantidadeHoraTrabalhada[i].value)
         somaTotalDasHoras += valor;
     }*/
+    //document.querySelector(".totalHoraTrabalhada").innerHTML = somaTotalDasHoras
 
-    document.querySelector(".totalHoraTrabalhada").innerHTML = somaTotalDasHoras
+    document.querySelector(".totalHoraTrabalhada1").innerHTML = tirarQuantidadeDeHora();
+
 
 
     /////@fazer um for, foreach Subtrair salario dentro do array todo
     /* for (i = 0; i <= quantidadeHoraTrabalhada.length; i++) {
-         somaTotalDasHoras += parseInt(quantidadeHoraTrabalhada[i].value);
-         console.log("SomaTorio " + somaTotalDasHoras);
+             somaTotalDasHoras += parseInt(quantidadeHoraTrabalhada[i].value);
+             console.log("SomaTorio " + somaTotalDasHoras);
+    
+         }*/
+    // document.querySelector(".totalSalario").innerHTML = somaTotalSalarios]
+    document.querySelector(".totalSalario").innerHTML = retirarSalario();
 
-     }*/
 
-    document.querySelector(".totalSalario").innerHTML = somaTotalSalarios
+    var umReal = 0;
+    var doisReais = 0;
+    var cincoReais = 0;
+    var dezReais = 0;
+    var vinteReais = 0;
+    var cinquentaReais = 0;
+    var cemReais = 0;
+
+    var recebeSoma = reducaoSomatorio();
+
+
+    /*if (recebeSoma >= 200) {
+        nota200 = parseInt(recebeSoma / 200.00);
+        recebeSoma -= 200.00 * nota200;
+    }*/
+    if (recebeSoma >= 100) {
+        cemReais = parseInt(recebeSoma / 100);
+        recebeSoma -= 100 * cemReais;
+    }
+    if (recebeSoma >= 50) {
+        cinquentaReais = parseInt(recebeSoma / 50);
+        recebeSoma -= 50 * cinquentaReais;
+    }
+    if (recebeSoma >= 20) {
+        vinteReais = parseInt(recebeSoma / 20);
+        recebeSoma -= 20 * vinteReais;
+    }
+    if (recebeSoma >= 10) {
+        dezReais = parseInt(recebeSoma / 10);
+        recebeSoma -= 10 * dezReais;
+    }
+    if (recebeSoma >= 5) {
+        cincoReais = parseInt(recebeSoma / 5);
+        recebeSoma -= 5 * cincoReais;
+
+    }
+    if (recebeSoma >= 2) {
+        doisReais = parseInt(recebeSoma / 2);
+        recebeSoma -= 2 * doisReais;
+    }
+    if (recebeSoma >= 1) {
+        umReal = (recebeSoma / 1);
+        recebeSoma -= 1 * umReal;
+    }
+
+    //document.querySelector(".duzentos").innerHTML = nota200;
+    document.querySelector('.pagar_100real').innerHTML = cemReais;
+    document.querySelector('.pagar_50real').innerHTML = cinquentaReais;
+    document.querySelector('.pagar_20real').innerHTML = vinteReais;
+    document.querySelector('.pagar_10real').innerHTML = dezReais;
+    document.querySelector('.pagar_5real').innerHTML = cincoReais;
+    document.querySelector('.pagar_2real').innerHTML = doisReais;
+    document.querySelector('.pagar_1real').innerHTML = umReal;
+
+
+
 }
