@@ -162,6 +162,54 @@ function acrescentar() {
     var cinquentaReais = 0;
     var cemReais = 0;
 
+    var recebeSoma = somatorioSalario();
+
+
+    /*if (recebeSoma >= 200) {
+        nota200 = parseInt(recebeSoma / 200.00);
+        recebeSoma -= 200.00 * nota200;
+    }*/
+    if (recebeSoma >= 100) {
+        cemReais = parseInt(recebeSoma / 100);
+        recebeSoma -= 100 * cemReais;
+    }
+    if (recebeSoma >= 50) {
+        cinquentaReais = parseInt(recebeSoma / 50);
+        recebeSoma -= 50 * cinquentaReais;
+    }
+    if (recebeSoma >= 20) {
+        vinteReais = parseInt(recebeSoma / 20);
+        recebeSoma -= 20 * vinteReais;
+    }
+    if (recebeSoma >= 10) {
+        dezReais = parseInt(recebeSoma / 10);
+        recebeSoma -= 10 * dezReais;
+    }
+    if (recebeSoma >= 5) {
+        cincoReais = parseInt(recebeSoma / 5);
+        recebeSoma -= 5 * cincoReais;
+
+    }
+    if (recebeSoma >= 2) {
+        doisReais = parseInt(recebeSoma / 2);
+        recebeSoma -= 2 * doisReais;
+    }
+    if (recebeSoma >= 1) {
+        umReal = (recebeSoma / 1);
+        recebeSoma -= 1 * umReal;
+    }
+
+    //document.querySelector(".duzentos").innerHTML = nota200;
+    document.querySelector('.pagar_100real').innerHTML = cemReais;
+    document.querySelector('.pagar_50real').innerHTML = cinquentaReais;
+    document.querySelector('.pagar_20real').innerHTML = vinteReais;
+    document.querySelector('.pagar_10real').innerHTML = dezReais;
+    document.querySelector('.pagar_5real').innerHTML = cincoReais;
+    document.querySelector('.pagar_2real').innerHTML = doisReais;
+    document.querySelector('.pagar_1real').innerHTML = umReal;
+
+
+
 
 
 
