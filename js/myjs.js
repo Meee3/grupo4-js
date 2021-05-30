@@ -10,7 +10,9 @@ var somaTotalSalarios = 0;
 function acrescentar() {
 
 
-    //Fazer um validador de números repetidos ou não....
+    //Fazer um validador de números Vazio e nulo....
+
+
     //-----------------------------Quadrado Esquerdo ----------------------------
 
     matricula.push(document.querySelector(".campo_matricula"))
@@ -18,9 +20,9 @@ function acrescentar() {
     salario.push(document.querySelector(".campo_salario"))
 
 
-    console.log(matricula.length)
-    console.log(quantidadeHoraTrabalhada[0].value)
-    console.log(salario[0].value)
+    console.log("Comprimento da matricula " + matricula.length)
+    console.log("quantidade da hora Trampada " + quantidadeHoraTrabalhada[0].value)
+    console.log("salario " + salario[0].value)
 
 
     /* ------Valor total da Hora trabalhada Com o Salario e depois adicionar em uma array ------
@@ -31,14 +33,11 @@ function acrescentar() {
     }
     console.log(totalAPagar)
     */
-
     //----------------------------Quadrado Direito -------------------
 
     document.querySelector(".totalMatricula").innerHTML = matricula.length
 
 
-    console.log("Qtd Horaa Trabalhada" + quantidadeHoraTrabalhada[0].value)
-    console.log("Qtd Horaa Trabalhada" + quantidadeHoraTrabalhada[1].value)
 
     /////@fazer um for, foreach somar quantidadeHoraTrabalhada dentro do array todo
     /*for (i = 0; i < quantidadeHoraTrabalhada.length; i++) {
