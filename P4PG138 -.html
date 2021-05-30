@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4PG138</title>
+    <script type="text/javascript" src="js/myjs.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css" media="screen" />
+</head>
+
+<body>
+    <nav></nav>
+    <div class="fundao">
+
+        <div class="QuadradoAEsquerda">
+            <table border=1 solid width="100%" heigth="100%" cellspacing="5" align="center" cellpadding=10>
+                <caption>Funcionário</caption>
+                <th>Descrição</th>
+                <th>Valores</th>
+                <tr>
+                    <td align="center">
+                        Matrícula:
+                    </td>
+                    <td align="center">
+                        <input type="text" class="campo_matricula">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center">
+                        Quantidade de Hora Trabalhada:
+                    </td>
+                    <td align="center">
+                        <input type="number" class="campo_qtdHoraTrabalhada">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        Salário por Hora:
+                    </td>
+                    <td align="center">
+                        <input type="number" class="campo_salario">
+                    </td>
+                </tr>
+            </table><br>
+            <center>
+                <input type="button" value="Acrescentar" name="Acrescentar" onclick="acrescentar()">
+                <input type="reset" value="Retirar" name="Decrementar" onclick="decrementar()"></center>
+        </div>
+        <div class="QuadradoADireita">
+            <!--Quadrado Direito-->
+            <table border=1 solid width="100%" heigth="100%" cellspacing="5" align="center" cellpadding=10>
+                <caption>Resultado</caption>
+                <th>Descrição</th>
+                <th>Valores</th>
+                <tr>
+                    <td align="center">
+                        Total de Matrículas:
+                    </td>
+                    <td align="center">
+                        <h3 class="totalMatricula">0</h3>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center">
+                        Quantidade de Hora Trabalhada:
+                    </td>
+                    <td align="center">
+                        <h3 class="totalHoraTrabalhada">-</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        Salário por Hora:
+                    </td>
+                    <td align="center">
+                        <h3 class="totalSalario">-</h3>
+                    </td>
+                </tr>
+            </table><br>
+        </div><br>
+        <div class="QuadradoDeBaixo">
+            <table>
+                <caption>
+                    Total a pagar em Dinheiro (Cédulas isoladas)
+                </caption>
+                <th><img src="img/UmReal.PNG"></th>
+                <th><img src="img/doisReais.PNG"></th>
+                <th><img src="img/CincoReais.PNG"></th>
+                <th><img src="img/DezReais.PNG"></th>
+                <th><img src="img/VinteReais.PNG"></th>
+                <th><img src="img/CinquentaReais.PNG"></th>
+                <th><img src="img/CemReais.PNG"></th>
+                <tr>
+                    <td>
+                        <h3 align="center" class="pagar_1real">pago em real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_2real">pago em 2real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_5real">pago em 5real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_10real">pago em 10real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_20real">pago em 20real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_50real">pago em 50real</h3>
+                    </td>
+                    <td>
+                        <h3 align="center" class="pagar_100real">pago em 100real</h3>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
