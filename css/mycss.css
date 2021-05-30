@@ -1,0 +1,65 @@
+nav {
+    background-color: #d2d4d6;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.fundao {
+    top: 51px;
+    width: 100%;
+    height: 100%;
+    background-color: #666699;
+}
+
+.QuadradoAEsquerda {
+    position: absolute;
+    top: 70px;
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    height: 300px;
+    background-color: #e1e2e4;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    width: 100%;
+    align-content: center;
+    padding: 13px;
+}
+
+img {
+    padding: 5px;
+    align-items: center;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.QuadradoADireita {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    height: 300px;
+    background-color: #e1e2e4;
+}
+
+.QuadradoDeBaixo {
+    padding: 20px 20px 20px 20px;
+    margin: 60px;
+    margin-left: 135px;
+    position: absolute;
+    bottom: 0;
+    height: 220px;
+    background-color: #f0f1f1;
+}
+
+h3 {
+    align-items: center;
+}
