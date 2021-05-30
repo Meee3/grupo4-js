@@ -21,7 +21,6 @@ function acrescentar() {
     console.log(matricula.length)
     console.log(quantidadeHoraTrabalhada[0].value)
     console.log(salario[0].value)
-        //console.log(matricula[0].value)
 
 
     /* ------Valor total da Hora trabalhada Com o Salario e depois adicionar em uma array ------
@@ -31,14 +30,15 @@ function acrescentar() {
 
     }
     console.log(totalAPagar)
+    */
 
     //----------------------------Quadrado Direito -------------------
 
     document.querySelector(".totalMatricula").innerHTML = matricula.length
 
 
-    console.log(quantidadeHoraTrabalhada[0].value)
-    console.log(quantidadeHoraTrabalhada[1].value)
+    console.log("Qtd Horaa Trabalhada" + quantidadeHoraTrabalhada[0].value)
+    console.log("Qtd Horaa Trabalhada" + quantidadeHoraTrabalhada[1].value)
 
     /////@fazer um for, foreach somar quantidadeHoraTrabalhada dentro do array todo
     /*for (i = 0; i < quantidadeHoraTrabalhada.length; i++) {
