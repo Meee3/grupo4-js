@@ -58,7 +58,7 @@ function acrescentar() {
 
     }
 
-    alert(QuantidadeDeHoraTrabalhadaTotal())
+    //alert(QuantidadeDeHoraTrabalhadaTotal())
 
     //Totais do Salario
     function somaSalario() {
@@ -81,7 +81,7 @@ function acrescentar() {
 
 
 
-    alert(somatorioSalario());
+    //alert(somatorioSalario());
     //------------------------------------------------------------------------
 
 
